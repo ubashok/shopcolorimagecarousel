@@ -11,10 +11,6 @@ const reducers = ((state = defaultValue, action) => {
             return {
                 ...state, setColor: action.payload.color, colorIndex: action.payload.index
             }
-        case "CART_SIZE":
-            return {
-                ...state, setSize: action.payload.cartSize
-            }
         default:
             return state;
     }

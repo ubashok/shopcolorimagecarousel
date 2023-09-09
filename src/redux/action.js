@@ -1,8 +1,8 @@
 export const setColorType = (color, index) => ({
     type: 'COLOR_TYPE', payload: { color, index }
 });
-export const setCartSize = (cartSize) => (
+export const addToCart = (product) => (
     {
-        type: 'CART_SIZE', payload: cartSize
+        type: 'ADD_TO_CART', payload: { Id: product.Id, Title: product.Title, Price: product.Price }
     }
 )

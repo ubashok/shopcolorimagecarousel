@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { setColorType } from '../../redux/action';
+import { setColorType, addToCart } from '../../redux/action';
 const ProductRIghtSideBar = () => {
     const givenSize = useSelector((colors)=> colors.StepsReducer.allColor);
     const defaultCheck = useSelector((colorIndex)=> colorIndex.StepsReducer.colorIndex)
@@ -9,6 +9,7 @@ const ProductRIghtSideBar = () => {
     
     }
     const isActive = useSelector((sel)=> sel.StepsReducer.setColor )
+
     return (
         <aside className="w-full lg:w-1/4 xl:w-1/4 xs:w-full pt-20 relative">
 
@@ -41,7 +42,8 @@ const ProductRIghtSideBar = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center">
-                    <button className="addToBag w-full">Add to Bag</button>
+                    <button className="addToBag w-full hidden">Add to Bag</button>
+                    <ProductList />
                 </div>
                 <p className="pb-4">Get 4 interest-free payments of $196.25 with Klarna LEARN MORE</p>
                 <p>Speak to a Personal Stylist CHAT NOW</p>
@@ -49,4 +51,21 @@ const ProductRIghtSideBar = () => {
         </aside>
     )
 }
+const ProductList = () => {
+    const dispatch = useDispatch();
+  
+    const products = [
+      { id: 1, name: 'Product 1', price: 10 },
+      { id: 2, name: 'Product 2', price: 15 },
+      // Add more products here
+    ];
+  
+    const handleAddToCart = (product) => {
+      dispatch(addToCart(product));
+    };
+  
+    return (
+        <button className='addToBag w-full' onClick={() => handleAddToCart(products[0])}>Add to Cart</button>
+    );
+  };
 export default ProductRIghtSideBar
