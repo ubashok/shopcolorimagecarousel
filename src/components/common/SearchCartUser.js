@@ -30,7 +30,7 @@ const SearchCartUser = (cartsize = 0) => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none" role="img">
                     <title>Cart Icon</title>
                     <desc>A simple Cart icon</desc>
-                    <text x="12" y="5" alignment-baseline="middle" text-anchor="middle" fill="black" fontSize={8} fontWeight={300}>{cartsize | 0}</text>
+                    <text x="12" y="5" alignmentBaseline="middle" textAnchor="middle" fill="black" fontSize={8} fontWeight={300}>{cartsize | 0}</text>
                     <path d="M23.5 1C23.5 1 22.3904 1.56982 21.2075 5.07013C20.2946 7.77146 19.3023 11.6218 18.8968 13.2388C18.7846 13.6865 18.3833 14 17.9218 14H12H6.07821C5.61668 14 5.21542 13.6865 5.10317 13.2388C4.69773 11.6218 3.70544 7.77146 2.79251 5.07013C1.60957 1.56982 0.5 1 0.5 1" stroke="black" strokeLinecap="round" />
                 </svg>
             </button>

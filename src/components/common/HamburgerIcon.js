@@ -9,7 +9,7 @@ const HamburgerIcon = ({ isMenuOpen, toggleMenu }) => {
       className="md:hidden text-gray-600 focus:outline-none"
       onClick={toggleMenu}
     >
-      <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="2x" />
+      <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="1x" />
     </button>
   );
 };
